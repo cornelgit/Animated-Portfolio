@@ -52,16 +52,20 @@ const Contact = () => {
                     whileInView={{ opacity: 0 }}
                     transition={{ delay: 3, duration: 1 }}
                 >
-                    <svg width="800px" height="800px" viewBox="0 0 24 24">
+                    <svg
+                        width="400px"
+                        height="400px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
                         <motion.path
                             d="M13.5 2C13.5 2 15.8335 2.21213 18.8033 5.18198C21.7731 8.15183 21.9853 10.4853 21.9853 10.4853"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
-                            fill="none"
                             initial={{ pathLength: 0 }}
                             animate={isInView && { pathLength: 1 }}
-                            transitin={{ duration: 3 }}
+                            transition={{ duration: 3 }}
                         />
                         <path
                             d="M14.207 5.53564C14.207 5.53564 15.197 5.81849 16.6819 7.30341C18.1668 8.78834 18.4497 9.77829 18.4497 9.77829"
@@ -78,7 +82,7 @@ const Contact = () => {
                 <motion.form
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 44, duration: 1 }}
+                    transition={{ delay: 4, duration: 1 }}
                 >
                     <input type="text" required placeholder="Name" />
                     <input type="email" required placeholder="Email" />
