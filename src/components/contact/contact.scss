@@ -18,13 +18,12 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 50px;
 
         @include mobile {
             gap: 20px;
             align-items: center;
             text-align: center;
-            margin-top: 70px;
         }
 
         h1 {
@@ -55,6 +54,13 @@
             position: absolute;
             margin: auto;
             z-index: -1;
+
+            @include mobile {
+                svg {
+                    width: 90%; // Adjust as necessary for mobile view
+                    height: auto; // Maintain aspect ratio
+                }
+            }
         }
 
         form {
