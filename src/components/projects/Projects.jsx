@@ -1,4 +1,4 @@
-import "./portfolio.scss";
+import "./projects.scss";
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -56,7 +56,7 @@ const Single = ({ item }) => {
     );
 };
 
-const Portfolio = () => {
+const Projects = () => {
     const ref = useRef();
 
     const { scrollYProgress } = useScroll({
@@ -70,9 +70,9 @@ const Portfolio = () => {
     });
 
     return (
-        <div className="portfolio" ref={ref}>
+        <div className="projects" ref={ref} id="Projects">
             <div className="progress">
-                <h1>Featured Works</h1>
+                <h1>Projects</h1>
                 <motion.div
                     className="progressBar"
                     style={{ scaleX }}
@@ -85,4 +85,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default Projects;

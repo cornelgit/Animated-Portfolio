@@ -1,5 +1,5 @@
 import "./sidebar.scss";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { useState } from "react";
 import Links from "./links/Links";
 import ToggleButton from "./toggleButton/ToggleButton";

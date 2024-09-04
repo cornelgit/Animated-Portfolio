@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const variants = {
     open: {
         transition: {
-            staggerChildren: 0.1,
+            staggerChildren: 0.25,
         },
     },
     closed: {
         transition: {
-            staggerChildren: 0.05,
+            staggerChildren: 0.1,
             staggerDirection: -1,
         },
     },
@@ -26,7 +26,7 @@ const itemVariants = {
 };
 
 const Links = () => {
-    const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
+    const items = ["Homepage", "Skills", "Projects", "Contact"];
 
     return (
         <motion.div className="links" variants={variants}>
@@ -35,7 +35,7 @@ const Links = () => {
                     href={`#${item}`}
                     key={item}
                     variants={itemVariants}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.25 }}
                     whileTap={{ scale: 0.95 }}
                 >
                     {item}

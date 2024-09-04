@@ -24,13 +24,23 @@
             }
         }
 
-        .social {
+        .social a {
             display: flex;
             gap: 20px;
+            align-items: center;
+
+            @include mobile {
+                gap: 16px;
+            }
 
             img {
-                width: 18px;
-                height: 18px;
+                width: 30px;
+                height: 30px;
+
+                @include mobile {
+                    width: 18px;
+                    height: 18px;
+                }
             }
         }
     }
