@@ -63,12 +63,12 @@
     .imageContainer {
         height: 100%;
         position: absolute;
-        top: 20%;
+        top: 11%;
         right: 0;
 
         @include mobile {
             height: 50%;
-            width: 100%;
+            width: 70%;
             top: unset;
             bottom: 0;
         }
@@ -88,5 +88,9 @@
         color: #ffffff09;
         width: 50%;
         font-weight: bold;
+
+        @include mobile {
+            display: none;
+        }
     }
 }

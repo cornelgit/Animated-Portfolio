@@ -18,9 +18,20 @@ const variants = {
     },
 };
 
+const textInputVariants = {
+    initial: {
+        borderColor: "#fff",
+    },
+    focused: {
+        borderColor: "orange",
+    },
+};
+
 const Contact = () => {
     const ref = useRef();
     const formRef = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isButtonClicked, setIsButtonClicked] = useState(false);
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -28,7 +39,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
+        setIsSubmitting(true);
         emailjs
             .sendForm("service_d48nffw", "template_a5535ea", formRef.current, {
                 publicKey: "7kl4gfjyAKK8TeGGd",
@@ -36,11 +47,22 @@ const Contact = () => {
             .then(
                 (result) => {
                     setSuccess(true);
+                    clearForm();
                 },
                 (error) => {
                     setError(true);
                 }
-            );
+            )
+            .finally(() => {
+                setIsSubmitting(false);
+                setIsButtonClicked(true);
+            });
+    };
+
+    const clearForm = () => {
+        formRef.current.name.value = "";
+        formRef.current.email.value = "";
+        formRef.current.message.value = "";
     };
 
     return (
@@ -107,23 +129,71 @@ const Contact = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 4, duration: 1 }}
                 >
-                    <input
+                    <motion.input
                         type="text"
                         required
                         placeholder="Name"
                         name="name"
+                        variants={textInputVariants}
+                        initial="initial"
+                        whileFocus="focused"
+                        transition={{ duration: 0.2 }}
+                        style={{
+                            outline: "none",
+                        }}
                     />
-                    <input
+                    <motion.input
                         type="email"
                         required
                         placeholder="Email"
                         name="email"
+                        variants={textInputVariants}
+                        initial="initial"
+                        whileFocus="focused"
+                        transition={{ duration: 0.2 }}
+                        style={{
+                            outline: "none",
+                        }}
                     />
-                    <textarea rows={8} placeholder="Message" name="message" />
-                    <button>Submit</button>
-                    {error && "Error"}
-                    {success && "Success"}
+                    <motion.textarea
+                        rows={8}
+                        placeholder="Message"
+                        name="message"
+                        variants={textInputVariants}
+                        initial="initial"
+                        whileFocus="focused"
+                        transition={{ duration: 0.2 }}
+                        style={{
+                            outline: "none",
+                        }}
+                    />
+                    <button type="submit" disabled={isButtonClicked}>
+                        {isSubmitting ? (
+                            <motion.div
+                                className="loading"
+                                initial={{ rotate: 0 }}
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 1, repeat: Infinity }}
+                            />
+                        ) : success ? (
+                            <span style={{ color: "green" }}>✔</span>
+                        ) : (
+                            "Submit"
+                        )}
+                    </button>
                 </motion.form>
+                {error && (
+                    <div className="email-result-container">
+                        <p className="error">
+                            Error sending email. Please try again.
+                        </p>
+                    </div>
+                )}
+                {success && (
+                    <div className="email-result-container">
+                        <p className="success">Email sent successfully!</p>
+                    </div>
+                )}
             </div>
         </motion.div>
     );

@@ -36,8 +36,8 @@ const skillsData = [
                 percentage: "50",
             },
             {
-                skillName: "JAVA",
-                percentage: "20",
+                skillName: "PYTHON",
+                percentage: "70",
             },
         ],
     },

@@ -35,10 +35,7 @@ const Skills = () => {
             animate={"animate"}
         >
             <motion.div className="textContainer" variants={variants}>
-                <p>
-                    I focus on helping your brand grow
-                    <br /> and move forward
-                </p>
+                <p>Embracing Growth: Always Learning, Always Evolving !</p>
                 <hr />
             </motion.div>
             <motion.div className="titleContainer" variants={variants}>

@@ -1,5 +1,7 @@
 import "./hero.scss";
-import { motion } from "framer-motion";
+import { animationControls, delay, motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const textVariants = {
     initial: {
@@ -38,7 +40,41 @@ const sliderVariants = {
     },
 };
 
+const heroPictureVariants = {
+    initial: {
+        opacity: 0,
+        y: 75,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 0.25,
+        },
+    },
+};
+
 const Hero = () => {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/Cornel Stoica - Resume.pdf";
+        link.download = "Cornel Stoica - Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const handleContactClick = (event) => {
+        event.preventDefault();
+        const contactSection = document.getElementById("Contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <div className="hero">
             <div className="wrapper">
@@ -53,8 +89,30 @@ const Hero = () => {
                         Software Engineer
                     </motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <button>See the Latest Works</button>
-                        <button>Contact Me</button>
+                        <motion.button
+                            whileHover={{
+                                backgroundColor: "orange",
+                                color: "black",
+                            }}
+                            onClick={handleDownload}
+                        >
+                            Download Resume
+                            <FontAwesomeIcon
+                                icon={faDownload}
+                                style={{
+                                    margin: "0 8px",
+                                }}
+                            />
+                        </motion.button>
+                        <motion.button
+                            whileHover={{
+                                backgroundColor: "orange",
+                                color: "black",
+                            }}
+                            onClick={handleContactClick}
+                        >
+                            Contact Me
+                        </motion.button>
                     </motion.div>
                     <motion.img
                         variants={textVariants}
@@ -72,9 +130,14 @@ const Hero = () => {
             >
                 Full-stack Developer
             </motion.div>
-            <div className="imageContainer">
+            <motion.div
+                className="imageContainer"
+                variants={heroPictureVariants}
+                initial="initial"
+                animate="animate"
+            >
                 <img src="/hero.png" alt="" />
-            </div>
+            </motion.div>
         </div>
     );
 };
