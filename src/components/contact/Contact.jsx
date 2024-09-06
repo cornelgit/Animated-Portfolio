@@ -80,7 +80,7 @@ const Contact = () => {
                     <span>c0rnel.st0ica@gmail.com</span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
-                    <h2>Address</h2>
+                    <h2>Location</h2>
                     <span>Beaverton, OR, USA</span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
@@ -89,7 +89,7 @@ const Contact = () => {
                 </motion.div>
             </motion.div>
             <div className="formContainer">
-                <motion.div
+                {/* <motion.div
                     className="phoneSvg"
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
@@ -121,13 +121,13 @@ const Contact = () => {
                             fill="#1C274C"
                         />
                     </svg>
-                </motion.div>
+                </motion.div> */}
                 <motion.form
                     ref={formRef}
                     onSubmit={sendEmail}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    transition={{ delay: 0.5, duration: 1 }}
                 >
                     <motion.input
                         type="text"

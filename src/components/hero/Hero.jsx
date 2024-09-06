@@ -105,7 +105,7 @@ const Hero = () => {
                             }}
                             onClick={handleDownload}
                         >
-                            Download Resume
+                            Download CV
                             <FontAwesomeIcon
                                 icon={faDownload}
                                 style={{

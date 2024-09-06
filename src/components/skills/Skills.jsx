@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import "./skills.scss";
 import skillsData from "./skillsData.js";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Line } from "rc-progress";
 
 const variants = {
     initial: {
         x: -500,
-        y: 100,
+        y: 0,
         opacity: 0,
     },
     animate: {
@@ -24,18 +24,16 @@ const variants = {
 const Skills = () => {
     const ref = useRef();
 
-    //const isInView = useInView(ref, { margin: "-100px" });
-
     return (
         <motion.div
             className="skills"
             ref={ref}
             variants={variants}
             initial="initial"
-            animate={"animate"}
+            animate="animate"
         >
             <motion.div className="textContainer" variants={variants}>
-                <p>Embracing Growth: Always Learning, Always Evolving !</p>
+                <p>Embracing Growth: Always Learning, Always Evolving!</p>
                 <hr />
             </motion.div>
             <motion.div className="titleContainer" variants={variants}>

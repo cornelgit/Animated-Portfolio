@@ -28,16 +28,16 @@ const skillsData = [
                 percentage: "70",
             },
             {
-                skillName: "EXPRESS",
+                skillName: "EXPRESS JS",
                 percentage: "70",
             },
             {
-                skillName: "C#",
-                percentage: "50",
+                skillName: "Python",
+                percentage: "70",
             },
             {
-                skillName: "PYTHON",
-                percentage: "70",
+                skillName: "RESTFUL APIs",
+                percentage: "60",
             },
         ],
     },
@@ -50,11 +50,11 @@ const skillsData = [
             },
             {
                 skillName: "MONGO DB",
-                percentage: "60",
+                percentage: "50",
             },
             {
                 skillName: "FIREBASE",
-                percentage: "60",
+                percentage: "50",
             },
             {
                 skillName: "AWS",
