@@ -86,8 +86,17 @@ const Hero = () => {
                 >
                     <motion.h2 variants={textVariants}>CORNEL STOICA</motion.h2>
                     <motion.h1 variants={textVariants}>
-                        Software Engineer
+                        Full-stack Developer
                     </motion.h1>
+                    <motion.h3 variants={textVariants}>
+                        As a passionate full-stack developer, I thrive on
+                        transforming complex problems into elegant solutions,
+                        leveraging my expertise in both front-end and back-end
+                        technologies. My commitment to continuous learning and
+                        collaboration drives me to create innovative,
+                        user-centered applications that not only meet but exceed
+                        expectations.
+                    </motion.h3>
                     <motion.div variants={textVariants} className="buttons">
                         <motion.button
                             whileHover={{
@@ -128,7 +137,7 @@ const Hero = () => {
                 initial="initial"
                 animate="animate"
             >
-                Full-stack Developer
+                Problem Solver
             </motion.div>
             <motion.div
                 className="imageContainer"
