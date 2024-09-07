@@ -36,17 +36,6 @@ const Navbar = () => {
                             whileHover={{ scale: 1.25 }}
                         />
                     </a>
-                    <a
-                        href="https://www.youtube.com/@cornelxbox25"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <motion.img
-                            src="/youtube-new.png"
-                            alt=""
-                            whileHover={{ scale: 1.25 }}
-                        />
-                    </a>
                 </motion.div>
             </motion.div>
         </div>
