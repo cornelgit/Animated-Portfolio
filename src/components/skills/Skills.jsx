@@ -39,9 +39,7 @@ const Skills = () => {
             <motion.div className="titleContainer" variants={variants}>
                 <div className="title">
                     <h1>
-                        <motion.b whileHover={{ color: "white" }}>
-                            Skills
-                        </motion.b>
+                        <motion.b>Skills</motion.b>
                     </h1>
                 </div>
             </motion.div>
