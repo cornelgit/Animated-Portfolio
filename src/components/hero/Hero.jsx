@@ -1,5 +1,5 @@
 import "./hero.scss";
-import { animationControls, delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
