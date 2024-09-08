@@ -5,9 +5,14 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
     {
         id: 1,
-        title: "React Commerce",
-        img: "https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        desc: "",
+        title: "Anime Video Player",
+        img: "Projects/project1.png",
+        problem:
+            "Many anime fans struggle to watch their favorite Yu-gi-oh Zexal episodes due to subscription fees, excessive online ads, and device limitations.",
+        solution:
+            "Engineered a user-friendly platform that enables fans to watch the most popular Yu-gi-oh Zexal episodes on-demand, free from subscription fees and intrusive advertisements.",
+        url: "https://react-anime-video-player.vercel.app/",
+        github: "https://github.com/cornelgit/React-Anime-Video-Player",
     },
     {
         id: 2,
@@ -36,7 +41,7 @@ const Single = ({ item }) => {
         target: ref,
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
+    const y = useTransform(scrollYProgress, [0, 1], [-500, 500]);
 
     return (
         <section>
@@ -47,8 +52,12 @@ const Single = ({ item }) => {
                     </div>
                     <motion.div className="textContainer" style={{ y }}>
                         <h2>{item.title}</h2>
-                        <p>{item.desc}</p>
-                        <button>See Demo</button>
+                        <p>{`Problem: ${item.problem}`}</p>
+                        <p>{`Solution: ${item.solution}`}</p>
+                        <div className="buttonContainer">
+                            <button>See Demo</button>
+                            <button>Source code</button>
+                        </div>
                     </motion.div>
                 </div>
             </div>
@@ -79,7 +88,7 @@ const Projects = () => {
                 ></motion.div>
             </div>
             {items.map((item) => (
-                <Single item={item} key={item.id} />
+                <Single item={item} key={item.id}></Single>
             ))}
         </div>
     );
