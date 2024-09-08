@@ -92,10 +92,10 @@ const Hero = () => {
                         As a passionate full-stack developer, I thrive on
                         transforming complex problems into elegant solutions,
                         leveraging my expertise in both front-end and back-end
-                        technologies. My commitment to continuous learning and
-                        collaboration drives me to create innovative,
-                        user-centered applications that not only meet but exceed
-                        expectations.
+                        technologies. <br />
+                        My commitment to continuous learning and collaboration
+                        drives me to create innovative, user-centered
+                        applications that not only meet but exceed expectations.
                     </motion.h3>
                     <motion.div variants={textVariants} className="buttons">
                         <motion.button
@@ -105,7 +105,7 @@ const Hero = () => {
                             }}
                             onClick={handleDownload}
                         >
-                            Download CV
+                            Download Resume
                             <FontAwesomeIcon
                                 icon={faDownload}
                                 style={{

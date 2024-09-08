@@ -50,7 +50,8 @@
             }
 
             h1 {
-                font-size: 88px;
+                font-size: 72px;
+                color: orange;
 
                 @include mobile {
                     font-size: 30px;

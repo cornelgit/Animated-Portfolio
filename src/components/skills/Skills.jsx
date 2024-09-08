@@ -2,7 +2,6 @@ import { useRef } from "react";
 import "./skills.scss";
 import skillsData from "./skillsData.js";
 import { motion } from "framer-motion";
-import { Line } from "rc-progress";
 
 const variants = {
     initial: {
@@ -44,30 +43,20 @@ const Skills = () => {
                 </div>
             </motion.div>
             <motion.div className="skillContainer" variants={variants}>
-                {skillsData.map((item, index) => (
-                    <motion.div className="skillBox" key={index}>
-                        <div className="skillBoxContent">
-                            <div className="titleContainer">
-                                <h3>{item.label}</h3>
-                            </div>
-                            <div className="skillsContainer">
-                                {item.data.map((skillItem, i) => (
-                                    <div className="progressbar" key={i}>
-                                        <p>{skillItem.skillName}</p>
-                                        <Line
-                                            percent={skillItem.percentage}
-                                            strokeWidth="2"
-                                            strokeColor="orange"
-                                            trailWidth="2"
-                                            strokeLinecap="square"
-                                            style={{ width: "100%" }}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
+                <div className="row">
+                    {skillsData.slice(0, 8).map((item, index) => (
+                        <motion.div className="skillBox" key={index}>
+                            <img src={`Skills Icons/${item}.svg`} alt={item} />
+                        </motion.div>
+                    ))}
+                </div>
+                <div className="row">
+                    {skillsData.slice(8).map((item, index) => (
+                        <motion.div className="skillBox" key={index + 8}>
+                            <img src={`Skills Icons/${item}.svg`} alt={item} />
+                        </motion.div>
+                    ))}
+                </div>
             </motion.div>
         </motion.div>
     );

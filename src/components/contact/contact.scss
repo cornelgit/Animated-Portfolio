@@ -6,29 +6,35 @@
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 55px;
+    justify-content: space-evenly;
+    flex-direction: column;
 
     @include mobile {
         width: 100%;
         padding: 10px;
-        flex-direction: column;
     }
 
     .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 55px;
+        gap: 50px;
+        max-height: 75%;
+        width: 65%;
+        text-align: center;
 
         @include mobile {
             gap: 20px;
             align-items: center;
-            text-align: center;
+        }
+
+        .titleContainer {
+            height: 45%;
         }
 
         h1 {
-            font-size: 100px;
-            line-height: 88px;
+            font-size: 76px;
+            color: orange;
 
             @include mobile {
                 font-size: 36px;
@@ -38,78 +44,79 @@
         span {
             font-weight: 300;
         }
-    }
 
-    .formContainer {
-        flex: 1;
-        position: relative;
-
-        @include mobile {
-            width: 100%;
-            padding: 50px;
-        }
-
-        .phoneSvg {
-            stroke: orange;
-            position: absolute;
-            margin: auto;
-            z-index: -1;
+        .formContainer {
+            flex: 1;
+            position: relative;
+            width: 60%;
+            margin: 0 auto;
 
             @include mobile {
-                svg {
-                    width: 90%;
-                    height: auto;
-                }
+                width: 100%;
             }
-        }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-
-            input,
-            textarea {
-                padding: 20px;
-                background-color: transparent;
-                border: 1px solid white;
-                color: white;
-                border-radius: 5px;
+            .phoneSvg {
+                stroke: orange;
+                position: absolute;
+                margin: auto;
+                z-index: -1;
 
                 @include mobile {
-                    padding: 10px;
+                    svg {
+                        width: 90%;
+                        height: auto;
+                    }
                 }
             }
 
-            button {
-                border: none;
-                background-color: orange;
-                font-weight: 500;
-                cursor: pointer;
+            form {
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 15px 20px;
-                border-radius: 5px;
-                font-size: 1rem;
+                flex-direction: column;
+                gap: 15px;
 
-                @include mobile {
-                    padding: 10px;
-                    font-size: 0.75rem;
+                input,
+                textarea {
+                    padding: 20px;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 5px;
+
+                    @include mobile {
+                        padding: 10px;
+                    }
                 }
 
-                .loading {
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 50%;
-                    border: 4px solid #1c274c;
-                    border-top-color: transparent;
+                button {
+                    border: none;
+                    background-color: orange;
+                    font-weight: 500;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    font-size: 1rem;
+
+                    @include mobile {
+                        padding: 10px;
+                        font-size: 0.75rem;
+                    }
+
+                    .loading {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 4px solid #1c274c;
+                        border-top-color: transparent;
+                    }
                 }
             }
-        }
 
-        .email-result-container {
-            padding-top: 1rem;
+            .email-result-container {
+                padding-top: 1rem;
+            }
         }
     }
 }
