@@ -10,27 +10,20 @@ const items = [
         problem:
             "Many anime fans struggle to watch their favorite Yu-gi-oh Zexal episodes due to subscription fees, excessive online ads, and device limitations.",
         solution:
-            "Engineered a user-friendly platform that enables fans to watch the most popular Yu-gi-oh Zexal episodes on-demand, free from subscription fees and intrusive advertisements.",
+            "Now, there's a user-friendly platform that enables fans to watch the most popular Yu-gi-oh Zexal episodes on-demand, free from subscription fees and intrusive advertisements.",
         url: "https://react-anime-video-player.vercel.app/",
         github: "https://github.com/cornelgit/React-Anime-Video-Player",
     },
     {
         id: 2,
-        title: "Blockchain App",
-        img: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        desc: "",
-    },
-    {
-        id: 3,
-        title: "Vanilla JS App",
-        img: "https://images.pexels.com/photos/27411756/pexels-photo-27411756/free-photo-of-oreo-milkshake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        desc: "",
-    },
-    {
-        id: 4,
-        title: "Music App",
-        img: "https://images.pexels.com/photos/16773548/pexels-photo-16773548/free-photo-of-youtube-music-stream-songs-and-music-videos-app-on-the-display-of-smartphone-or-tablet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        desc: "",
+        title: "Anime Video Player",
+        img: "Projects/project1.png",
+        problem:
+            "Watching Yu-gi-oh Zexal episodes online can be a frustrating experience. Many websites offer low-quality streams or require navigating through intrusive ads.",
+        solution:
+            "My video player provides a seamless, high-quality viewing experience for all your favorite Yu-gi-oh Zexal episodes. Enjoy the show without distractions or compromises.",
+        url: "https://react-anime-video-player.vercel.app/",
+        github: "https://github.com/cornelgit/React-Anime-Video-Player",
     },
 ];
 
@@ -41,7 +34,7 @@ const Single = ({ item }) => {
         target: ref,
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [-500, 500]);
+    const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
     return (
         <section>
@@ -52,11 +45,19 @@ const Single = ({ item }) => {
                     </div>
                     <motion.div className="textContainer" style={{ y }}>
                         <h2>{item.title}</h2>
-                        <p>{`Problem: ${item.problem}`}</p>
-                        <p>{`Solution: ${item.solution}`}</p>
+                        <p>{item.problem}</p>
+                        <p>{item.solution}</p>
                         <div className="buttonContainer">
-                            <button>See Demo</button>
-                            <button>Source code</button>
+                            <a href={item.url} target="_blank" rel="noreferrer">
+                                <button>Watch Now</button>
+                            </a>
+                            <a
+                                href={item.github}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <button>Source Code</button>
+                            </a>
                         </div>
                     </motion.div>
                 </div>

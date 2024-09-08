@@ -58,7 +58,7 @@ const heroPictureVariants = {
 const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/Cornel Stoica - Resume.pdf";
+        link.href = "Resume/Cornel Stoica - Resume.pdf";
         link.download = "Cornel Stoica - Resume.pdf";
         document.body.appendChild(link);
         link.click();
