@@ -49,6 +49,7 @@
 
             .imageContainer {
                 flex: 1;
+                cursor: pointer;
 
                 @include mobile {
                     display: flex;

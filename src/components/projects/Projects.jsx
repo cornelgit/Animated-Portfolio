@@ -34,15 +34,21 @@ const Single = ({ item }) => {
         target: ref,
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+    const y = useTransform(scrollYProgress, [0, 1], [-400, 400]);
 
     return (
         <section>
             <div className="container">
                 <div className="wrapper">
-                    <div className="imageContainer" ref={ref}>
-                        <img src={item.img} alt="" />
-                    </div>
+                    <motion.div
+                        className="imageContainer"
+                        ref={ref}
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        <a href={item.url} target="_blank" rel="noreferrer">
+                            <img src={item.img} alt="" />
+                        </a>
+                    </motion.div>
                     <motion.div className="textContainer" style={{ y }}>
                         <h2>{item.title}</h2>
                         <p>{item.problem}</p>
