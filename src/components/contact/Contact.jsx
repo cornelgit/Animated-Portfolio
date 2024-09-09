@@ -77,7 +77,6 @@ const Contact = () => {
                 <div className="titleContainer">
                     <motion.h1 variants={variants}>Contact Me</motion.h1>
                 </div>
-                {/* <motion.h1 variants={variants}>Contact Me</motion.h1> */}
                 <div className="formContainer">
                     <motion.div
                         className="phoneSvg"
@@ -162,6 +161,11 @@ const Contact = () => {
                     )}
                 </div>
             </motion.div>
+            <footer className="footer">
+                <div className="footerContainer">
+                    <p className="footerText">&copy; 2024 Cornel Stoica</p>
+                </div>
+            </footer>
         </motion.div>
     );
 };
