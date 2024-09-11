@@ -2,6 +2,7 @@
 
 .navbar {
     height: 100px;
+    width: 100%;
 
     .wrapper {
         max-width: 1366px;
@@ -10,13 +11,15 @@
         align-items: center;
         justify-content: space-between;
         height: 100%;
+        width: 45%;
 
         @include mobile {
             justify-content: flex-end;
             padding: 20px;
+            width: 100%;
         }
 
-        span {
+        .portfolio-text {
             font-weight: bold;
 
             @include mobile {
@@ -36,11 +39,6 @@
             img {
                 width: 30px;
                 height: 30px;
-
-                @include mobile {
-                    width: 18px;
-                    height: 18px;
-                }
             }
         }
     }

@@ -98,13 +98,7 @@ const Hero = () => {
                         applications that not only meet but exceed expectations.
                     </motion.h3>
                     <motion.div variants={textVariants} className="buttons">
-                        <motion.button
-                            whileHover={{
-                                backgroundColor: "orange",
-                                color: "black",
-                            }}
-                            onClick={handleDownload}
-                        >
+                        <motion.button onClick={handleDownload}>
                             Download Resume
                             <FontAwesomeIcon
                                 icon={faDownload}
@@ -113,25 +107,19 @@ const Hero = () => {
                                 }}
                             />
                         </motion.button>
-                        <motion.button
-                            whileHover={{
-                                backgroundColor: "orange",
-                                color: "black",
-                            }}
-                            onClick={handleContactClick}
-                        >
+                        <motion.button onClick={handleContactClick}>
                             Contact Me
                         </motion.button>
                     </motion.div>
-                    <motion.img
+                    {/* <motion.img
                         variants={textVariants}
                         animate="scrollButton"
                         src="/scroll.png"
                         alt=""
-                    />
+                    /> */}
                 </motion.div>
             </div>
-            <motion.div
+            {/* <motion.div
                 className="slidingTextContainer"
                 variants={sliderVariants}
                 initial="initial"
@@ -146,7 +134,7 @@ const Hero = () => {
                 animate="animate"
             >
                 <img src="/hero.png" alt="" />
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };

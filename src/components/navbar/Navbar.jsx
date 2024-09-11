@@ -12,7 +12,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.25 }}
             >
-                <motion.span>Portfolio</motion.span>
+                <motion.span className="portfolio-text">Portfolio</motion.span>
                 <motion.div className="social">
                     <a
                         href="https://www.linkedin.com/in/cornel-stoica-9665aa120"
@@ -21,7 +21,7 @@ const Navbar = () => {
                     >
                         <motion.img
                             src="/linkedin.png"
-                            alt=""
+                            alt="LinkedIn"
                             whileHover={{ scale: 1.25 }}
                         />
                     </a>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     >
                         <motion.img
                             src="/github.svg"
-                            alt=""
+                            alt="GitHub"
                             whileHover={{ scale: 1.25 }}
                         />
                     </a>
