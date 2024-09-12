@@ -6,7 +6,7 @@ const items = [
     {
         id: 1,
         title: "Anime Video Player",
-        img: "Projects/project1.png",
+        img: "Projects/proj1.png",
         problem:
             "Many anime fans struggle to watch their favorite Yu-gi-oh Zexal episodes due to subscription fees, excessive online ads, and device limitations.",
         solution:
@@ -17,7 +17,7 @@ const items = [
     {
         id: 2,
         title: "Anime Video Player",
-        img: "Projects/project1.png",
+        img: "Projects/proj1.png",
         problem:
             "Watching Yu-gi-oh Zexal episodes online can be a frustrating experience. Many websites offer low-quality streams or require navigating through intrusive ads.",
         solution:
