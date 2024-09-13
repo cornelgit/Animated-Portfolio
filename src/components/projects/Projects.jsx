@@ -16,14 +16,14 @@ const items = [
     },
     {
         id: 2,
-        title: "Anime Video Player",
-        img: "Projects/proj1.png",
+        title: "Crypto Dash",
+        img: "Projects/proj2.png",
         problem:
-            "Watching Yu-gi-oh Zexal episodes online can be a frustrating experience. Many websites offer low-quality streams or require navigating through intrusive ads.",
+            "Crypto enthusiasts often encounter challenges in accessing a single, reliable source for real-time cryptocurrency price data, detailed stats, interactive charts, and the latest news, resulting in fragmented information and missed opportunities.",
         solution:
-            "My video player provides a seamless, high-quality viewing experience for all your favorite Yu-gi-oh Zexal episodes. Enjoy the show without distractions or compromises.",
-        url: "https://react-anime-video-player.vercel.app/",
-        github: "https://github.com/cornelgit/React-Anime-Video-Player",
+            "Crypto Dash consolidates cryptocurrency price data, comprehensive stats, interactive charts, and up-to-date news into one intuitive app, enabling users to stay informed and make smarter trading decisions effortlessly.",
+        url: "https://crypto-dash-xi.vercel.app/",
+        github: "https://github.com/cornelgit/CryptoDash",
     },
 ];
 
@@ -55,7 +55,7 @@ const Single = ({ item }) => {
                         <p>{item.solution}</p>
                         <div className="buttonContainer">
                             <a href={item.url} target="_blank" rel="noreferrer">
-                                <button>Watch Now</button>
+                                <button>See Demo</button>
                             </a>
                             <a
                                 href={item.github}
