@@ -73,9 +73,7 @@ const Hero = () => {
                             Download Resume
                             <FontAwesomeIcon
                                 icon={faDownload}
-                                style={{
-                                    margin: "0 8px",
-                                }}
+                                className="downloadIcon"
                             />
                         </motion.button>
                         <motion.button onClick={handleContactClick}>

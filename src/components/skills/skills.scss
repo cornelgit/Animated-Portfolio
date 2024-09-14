@@ -127,6 +127,10 @@
                 max-height: 20%;
                 scale: 0.75;
 
+                &:hover {
+                    scale: 0.85;
+                }
+
                 @include mobile {
                     flex: 0 0 calc(22%);
                     max-width: 100%;
