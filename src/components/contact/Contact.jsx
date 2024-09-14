@@ -1,6 +1,6 @@
 import "./contact.scss";
-import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const variants = {
@@ -20,34 +20,30 @@ const variants = {
 
 const textInputVariants = {
     initial: {
-        borderColor: "#fff",
+        borderColor: "#FFF",
     },
     focused: {
-        borderColor: "orange",
+        borderColor: "#FFA500",
     },
 };
 
 const Contact = () => {
-    const ref = useRef();
-    const formRef = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isButtonClicked, setIsButtonClicked] = useState(false);
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    const isInView = useInView(ref, { margin: "-100px" });
-
     const sendEmail = (e) => {
         e.preventDefault();
+        const form = e.target;
         setIsSubmitting(true);
         emailjs
-            .sendForm("service_d48nffw", "template_a5535ea", formRef.current, {
+            .sendForm("service_d48nffw", "template_a5535ea", form, {
                 publicKey: "7kl4gfjyAKK8TeGGd",
             })
             .then(
                 (result) => {
                     setSuccess(true);
-                    clearForm();
                 },
                 (error) => {
                     setError(true);
@@ -56,18 +52,14 @@ const Contact = () => {
             .finally(() => {
                 setIsSubmitting(false);
                 setIsButtonClicked(true);
+                form.name.value = "";
+                form.email.value = "";
+                form.message.value = "";
             });
-    };
-
-    const clearForm = () => {
-        formRef.current.name.value = "";
-        formRef.current.email.value = "";
-        formRef.current.message.value = "";
     };
 
     return (
         <motion.div
-            ref={ref}
             className="contact"
             variants={variants}
             initial="initial"
@@ -85,7 +77,6 @@ const Contact = () => {
                         transition={{ delay: 3, duration: 1 }}
                     ></motion.div>
                     <motion.form
-                        ref={formRef}
                         onSubmit={sendEmail}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}

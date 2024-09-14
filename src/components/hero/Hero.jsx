@@ -26,35 +26,6 @@ const textVariants = {
     },
 };
 
-const sliderVariants = {
-    initial: {
-        x: 0,
-    },
-    animate: {
-        x: "-200%",
-        transition: {
-            repeat: Infinity,
-            repeatType: "mirror",
-            duration: 10,
-        },
-    },
-};
-
-const heroPictureVariants = {
-    initial: {
-        opacity: 0,
-        y: 75,
-    },
-    animate: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1,
-            delay: 0.3,
-        },
-    },
-};
-
 const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
@@ -111,30 +82,8 @@ const Hero = () => {
                             Contact Me
                         </motion.button>
                     </motion.div>
-                    {/* <motion.img
-                        variants={textVariants}
-                        animate="scrollButton"
-                        src="/scroll.png"
-                        alt=""
-                    /> */}
                 </motion.div>
             </div>
-            {/* <motion.div
-                className="slidingTextContainer"
-                variants={sliderVariants}
-                initial="initial"
-                animate="animate"
-            >
-                Problem Solver
-            </motion.div>
-            <motion.div
-                className="imageContainer"
-                variants={heroPictureVariants}
-                initial="initial"
-                animate="animate"
-            >
-                <img src="/hero.png" alt="" />
-            </motion.div> */}
         </div>
     );
 };
