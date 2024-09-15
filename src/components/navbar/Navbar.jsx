@@ -20,7 +20,7 @@ const Navbar = () => {
                         rel="noopener noreferrer"
                     >
                         <motion.img
-                            src="/linkedin.png"
+                            src="Social Icons/linkedin.png"
                             alt="LinkedIn"
                             whileHover={{ scale: 1.25 }}
                         />
@@ -31,7 +31,7 @@ const Navbar = () => {
                         rel="noopener noreferrer"
                     >
                         <motion.img
-                            src="/github.svg"
+                            src="Social Icons/github.svg"
                             alt="GitHub"
                             whileHover={{ scale: 1.25 }}
                         />

@@ -38,9 +38,14 @@ const Contact = () => {
         const form = e.target;
         setIsSubmitting(true);
         emailjs
-            .sendForm("service_d48nffw", "template_a5535ea", form, {
-                publicKey: "7kl4gfjyAKK8TeGGd",
-            })
+            .sendForm(
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
+                form,
+                {
+                    publicKey: import.meta.env.VITE_PUBLIC_KEY,
+                }
+            )
             .then(
                 (result) => {
                     setSuccess(true);
