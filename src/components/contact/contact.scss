@@ -55,20 +55,6 @@
                 width: 100%;
             }
 
-            .phoneSvg {
-                stroke: orange;
-                position: absolute;
-                margin: auto;
-                z-index: -1;
-
-                @include mobile {
-                    svg {
-                        width: 90%;
-                        height: auto;
-                    }
-                }
-            }
-
             form {
                 display: flex;
                 flex-direction: column;
