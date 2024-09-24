@@ -43,7 +43,7 @@ const Single = ({ item }) => {
                     <motion.div
                         className="imageContainer"
                         ref={ref}
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                     >
                         <a href={item.url} target="_blank" rel="noreferrer">
                             <img src={item.img} alt="" />
