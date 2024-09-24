@@ -159,7 +159,10 @@ const Contact = () => {
             </motion.div>
             <footer className="footer">
                 <div className="footerContainer">
-                    <p className="footerText">&copy; 2024 Cornel Stoica</p>
+                    <p>
+                        &copy; {new Date().getFullYear()} Cornel Stoica. All
+                        rights reserved.
+                    </p>
                 </div>
             </footer>
         </motion.div>
