@@ -5,7 +5,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(180deg, #111132, #0c0c1d);
+    background-image: url("/Background/dark-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .textContainer {
         flex: 1;

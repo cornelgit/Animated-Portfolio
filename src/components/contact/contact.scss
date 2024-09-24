@@ -9,6 +9,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    background-image: url("/Background/dark-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include mobile {
         width: 100%;
