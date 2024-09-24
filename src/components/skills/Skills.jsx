@@ -37,9 +37,7 @@ const Skills = () => {
             </motion.div>
             <motion.div className="titleContainer" variants={variants}>
                 <div className="title">
-                    <h1>
-                        <motion.b>Skills</motion.b>
-                    </h1>
+                    <motion.h1>Skills</motion.h1>
                 </div>
             </motion.div>
             <motion.div className="skillContainer" variants={variants}>

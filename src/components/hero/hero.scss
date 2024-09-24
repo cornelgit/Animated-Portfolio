@@ -53,9 +53,6 @@
             }
 
             h1 {
-                font-size: 72px;
-                color: orange;
-
                 @include mobile {
                     font-size: 30px;
                 }

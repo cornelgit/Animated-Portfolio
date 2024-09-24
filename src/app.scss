@@ -30,6 +30,12 @@ section {
     background-size: cover;
 }
 
+h1 {
+    font-size: 70px;
+    font-weight: 600;
+    color: orange;
+}
+
 @mixin mobile {
     @media (max-width: 738px) {
         @content;
