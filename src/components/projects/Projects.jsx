@@ -25,6 +25,17 @@ const items = [
         url: "https://crypto-dash-xi.vercel.app/",
         github: "https://github.com/cornelgit/CryptoDash",
     },
+    {
+        id: 3,
+        title: "Fox Quest - 2D Platformer Game",
+        img: "Projects/proj3.png",
+        problem:
+            "Players of platformer games often face high costs, disruptive advertisements, and complex levels that can lead to frustration. These issues hinder their ability to enjoy the game fully.",
+        solution:
+            "Fox Quest offers an engaging gaming experience that is free to play with no ads. By eliminating these barriers, the game allows players to fully immerse themselves in the adventure, enhancing enjoyment and accessibility for everyone.",
+        url: "https://fox-quest-the-scroll-of-adventure.vercel.app/",
+        github: "https://github.com/cornelgit/FoxQuest-The-Scroll-of-Adventure",
+    },
 ];
 
 const Single = ({ item }) => {
