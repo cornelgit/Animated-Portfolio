@@ -64,6 +64,7 @@ const Hero = () => {
                         transforming complex problems into elegant solutions,
                         leveraging my expertise in both front-end and back-end
                         technologies. <br />
+                        <br />
                         My commitment to continuous learning and collaboration
                         drives me to create innovative, user-centered
                         applications that not only meet but exceed expectations.
