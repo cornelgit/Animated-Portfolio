@@ -16,8 +16,11 @@
         background-size: cover;
 
         @include mobile {
-            padding-top: calc(100vh - 100px);
-            font-size: 20px;
+            padding-top: 40px;
+
+            h1 {
+                font-size: 36px;
+            }
         }
 
         .progressBar {
@@ -48,6 +51,7 @@
                 gap: 0;
                 margin: 0 auto;
                 width: 90%;
+                padding-top: calc(100vh * 0.25);
             }
 
             .imageContainer {
