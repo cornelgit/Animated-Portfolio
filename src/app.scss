@@ -10,8 +10,14 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
-body {
+body,
+html,
+#root {
     color: white;
+    background-image: url("/Background/dark-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {

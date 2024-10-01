@@ -32,6 +32,7 @@ const Links = () => {
         <motion.div className="links" variants={variants}>
             {items.map((item) => (
                 <motion.a
+                    aria-label={`Go to ${item}`}
                     href={`#${item}`}
                     key={item}
                     variants={itemVariants}

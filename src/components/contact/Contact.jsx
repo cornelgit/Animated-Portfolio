@@ -88,6 +88,7 @@ const Contact = () => {
                         transition={{ delay: 0.5, duration: 1 }}
                     >
                         <motion.input
+                            aria-label="Name"
                             type="text"
                             required
                             placeholder="Name"
@@ -101,6 +102,7 @@ const Contact = () => {
                             }}
                         />
                         <motion.input
+                            aria-label="Email"
                             type="email"
                             required
                             placeholder="Email"
@@ -114,6 +116,7 @@ const Contact = () => {
                             }}
                         />
                         <motion.textarea
+                            aria-label="Message"
                             rows={8}
                             placeholder="Message"
                             name="message"

@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
 
-const ToggleButton = ({ setOpen }) => {
+const ToggleButton = ({ open, setOpen }) => {
     return (
-        <button onClick={() => setOpen((prev) => !prev)}>
-            <svg width="23" height="23" viewBox="0 0 23 15">
+        <button
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            onClick={() => setOpen(() => !open)}
+        >
+            <svg
+                aria-label="Nav Button"
+                width="23"
+                height="23"
+                viewBox="0 0 23 15"
+            >
                 <motion.path
                     strokeWidth="3"
                     stroke="black"
