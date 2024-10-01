@@ -57,7 +57,7 @@ const Single = ({ item }) => {
                         whileHover={{ scale: 1.05 }}
                     >
                         <a href={item.url} target="_blank" rel="noreferrer">
-                            <img src={item.img} />
+                            <img src={item.img} alt={item.title} />
                         </a>
                     </motion.div>
                     <motion.div className="textContainer" style={{ y }}>
