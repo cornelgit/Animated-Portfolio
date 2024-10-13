@@ -57,8 +57,11 @@ const Hero = () => {
                 >
                     <motion.h2 variants={textVariants}>CORNEL STOICA</motion.h2>
                     <motion.h1 variants={textVariants}>
-                        Full-stack Developer
+                        Software Engineer
                     </motion.h1>
+                    {/* <motion.h1 variants={textVariants}>
+                        Full-stack Developer
+                    </motion.h1> */}
                     <motion.h3 variants={textVariants}>
                         As a passionate full-stack developer, I thrive on
                         transforming complex problems into elegant solutions,
