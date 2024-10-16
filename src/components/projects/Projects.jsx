@@ -66,7 +66,7 @@ const Single = ({ item }) => {
                         <p>{item.solution}</p>
                         <div className="buttonContainer">
                             <a href={item.url} target="_blank" rel="noreferrer">
-                                <button>See Demo</button>
+                                <button>See Project</button>
                             </a>
                             <a
                                 href={item.github}
