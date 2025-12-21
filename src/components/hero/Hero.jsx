@@ -29,8 +29,8 @@ const textVariants = {
 const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "Resume/Cornel Stoica Resume.pdf";
-        link.download = "Cornel Stoica - Resume.pdf";
+        link.href = "Resume/Cornel Stoica - Resume.docx";
+        link.download = "Cornel Stoica - Resume.docx";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
